@@ -1,5 +1,7 @@
 /**
- * Sample React Native App
+ * SYN-LANG
+ * by JS-SNG
+ * IBM BlueHack - 10/26-27/2019
  * https://github.com/facebook/react-native
  *
  * @format
