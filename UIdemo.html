@@ -7,24 +7,33 @@
 </head>
 <body>
 <div class="photobooth">
+  <div class="focus">
+  <div class="inner-focus">
+  </div>
+  </div>
   <div class="panel">
   <p>
     <i class="fa fa-bars"></i>
     <i class="fa fa-stop-circle"></i>
     <i class="fa fa-volume-up"></i>
     <i class="fa fa-filter"></i>
-
+    <i class="fa fa-toggle-on"></i>
   </p>
+
   </div>
   <canvas class="photo"></canvas>
-  <video class="player">
-  
+  <select class="lang" name="language">
+  <option value="english">English</option>
+  <option value="espanol">Espa&ntilde;ol</option>
+  <option value="francois">Fran&ccedil;ois</option>
+  <option value="chinese">Chinese</option>
+  </select>
+  <video class="player">  
   <img class="ring" src="ring.png" height="70px" width="70px">
   </video>
   <form class="textbox" action="/action_page.php">
-  Text: 
   <br>
-  <input class="textbox" type="textarea" name="text">
+  <input class="textbox" type="textarea" name="text" placeholder="Text">
   <br>
   <input class="submit" type="submit" value="Submit">
 </form>
@@ -207,6 +216,24 @@ input.textbox {
     height: 100px;
 }
 
+i.fa.fa-toggle-on {
+    position: relative;
+    -webkit-transform: rotate(90deg);
+    color: #000;
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 67px;
+    left: -1px;
+}
+
+select.lang {
+    top: 165px;
+    left: 115px;
+    position: relative;
+}
+
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -220,6 +247,18 @@ input.textbox {
     position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.focus {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: dashed 1px;
+    top: 164px;
+    left: 191px;
+    z-index: 2;
 }
 
 form.textbox {
@@ -251,7 +290,7 @@ form.textbox {
     width: 52px;
     height: 42px;
     top: 190px;
-    left: 285px;
+    left: 269px;
     position: relative;
 }
 
@@ -268,7 +307,7 @@ form.textbox {
 .player {
     position: relative;
     top: 142px;
-    right: -105px;
+    right: -27px;
     width: 190px;
 }
 
