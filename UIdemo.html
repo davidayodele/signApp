@@ -1,13 +1,24 @@
+<!-- Adapted from https://codepen.io/tjsantos/pen/GEyKNd-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>SYN_LANG</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
 <div class="photobooth">
+  <div class="panel">
+  <p>
+    <i class="fa fa-bars"></i>
+    <i class="fa fa-stop-circle"></i>
+    <i class="fa fa-volume-up"></i>
+    <i class="fa fa-filter"></i>
+
+  </p>
+  </div>
   <canvas class="photo"></canvas>
   <video class="player">
+  
   <img class="ring" src="ring.png" height="70px" width="70px">
   </video>
   <form class="textbox" action="/action_page.php">
@@ -196,19 +207,37 @@ input.textbox {
     height: 100px;
 }
 
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 21px;
+    /* font-weight: lighter; */
+    text-rendering: auto;
+    color: #fff;
+    /* box-shadow: 0px 0.5px 0px 3px rgba(255, 255, 255, 0.7); */
+    /* border-radius: 50%; */
+    left: 5px;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 form.textbox {
-    margin-left: 220px;
-    margin-top: 10px;
+    left: 169px;
+    top: 183px;
+    position: relative;
 }
 
 .photobooth {
-    background: url(phones2.png);
-    background-position: 200px 100px;
-    background-size: 50%;
+    background: url(https://raw.githubusercontent.com/davidayodele/signApp/master/phones2.png);
+    background-position: 150px 100px;
+    background-size: 80%;
     background-repeat: no-repeat;
     max-width: 100rem;
     margin: 2rem auto;
     border-radius: 2px;
+    z-index: -1;
+    position: absolute;
 }
 
 /*clearfix*/
@@ -219,19 +248,28 @@ form.textbox {
 }
 
 .photo {
-    width: 40px;
-    height: 30px;
-    margin-left: 350px;
-    margin-right: auto;
-    margin-top: 299px;
-    /* right: 10px; */
+    width: 52px;
+    height: 42px;
+    top: 190px;
+    left: 285px;
+    position: relative;
+}
+
+.panel {
+    height: 143px;
+    width: 28px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    position: absolute;
+    left: 322px;
+    top: 142px;
 }
 
 .player {
-    position: absolute;
-    top: 163px;
-    right: 209px;
-    width: 200px;
+    position: relative;
+    top: 142px;
+    right: -105px;
+    width: 190px;
 }
 
 /*
