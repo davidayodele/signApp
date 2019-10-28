@@ -34,6 +34,9 @@
   <video class="player">  
   <img class="ring" src="ring.png" height="70px" width="70px">
   </video>
+  <select class="sign" name="sign">
+  <option value="ASL">ASL</option>
+  </select>
   <form class="textbox" action="/action_page.php">
   <br>
   <input class="textbox" type="textarea" name="text" placeholder="Text">
@@ -216,7 +219,7 @@ html {
 
 input.textbox {
     margin-top: 5px;
-    height: 100px;
+    height: 90px;
 }
 
 i.fa.fa-toggle-on {
@@ -235,6 +238,12 @@ select.lang {
     top: 165px;
     left: 115px;
     position: relative;
+}
+
+.sign {
+    top: 336px;
+    left: 270px;
+    position: absolute;
 }
 
 .fa {
@@ -266,7 +275,7 @@ select.lang {
 
 form.textbox {
     left: 169px;
-    top: 183px;
+    top: 197px;
     position: relative;
 }
 
